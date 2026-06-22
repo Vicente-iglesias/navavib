@@ -57,7 +57,7 @@ export function BloomLanding() {
   return (
     <div className="relative">
       <video
-        className="fixed inset-0 z-0 h-full w-full object-cover"
+        className="fixed inset-0 z-0 h-full w-full object-cover [transform:translateZ(0)]"
         src={VIDEO_SRC}
         autoPlay
         loop
@@ -237,7 +237,7 @@ export function BloomLanding() {
             </div>
 
             <div className="mt-auto" id="servicios">
-              <div className="liquid-glass rounded-[2.5rem] p-4">
+              <div className="mt-auto rounded-[2.5rem] p-1">
                 <div className="grid grid-cols-2 gap-3">
                   {services.slice(0, 2).map((service) => (
                     <div
@@ -291,7 +291,7 @@ export function BloomLanding() {
             <h2 className="mt-3 text-3xl font-medium text-white">Lo que puedo construir contigo</h2>
             <div className="mt-8 grid gap-4">
               {services.map((service) => (
-                <div key={service.title} className="liquid-glass rounded-2xl p-5">
+                <div key={service.title} className="liquid-glass-inner rounded-2xl p-5">
                   <span className="text-lg text-white/80">{service.icon}</span>
                   <h3 className="mt-3 text-base font-medium text-white">{service.title}</h3>
                   <p className="mt-2 text-sm text-white/60">{service.description}</p>
@@ -308,7 +308,7 @@ export function BloomLanding() {
             <h2 className="mt-3 text-3xl font-medium text-white">Cómo trabajo</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {processSteps.map((step) => (
-                <div key={step.step} className="liquid-glass rounded-2xl p-5">
+                <div key={step.step} className="liquid-glass-inner rounded-2xl p-5">
                   <span className="text-xs font-medium text-white/50">{step.step}</span>
                   <h3 className="mt-2 text-base font-medium text-white">{step.title}</h3>
                   <p className="mt-2 text-sm text-white/60">{step.description}</p>
@@ -329,7 +329,7 @@ export function BloomLanding() {
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {projects.map((project) => (
-                <article key={project.title} className="liquid-glass overflow-hidden rounded-2xl">
+                <article key={project.title} className="liquid-glass-inner overflow-hidden rounded-2xl">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -342,7 +342,7 @@ export function BloomLanding() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="liquid-glass rounded-full px-3 py-1 text-xs text-white/60"
+                          className="liquid-glass-inner rounded-full px-3 py-1 text-xs text-white/60"
                         >
                           {tag}
                         </span>
