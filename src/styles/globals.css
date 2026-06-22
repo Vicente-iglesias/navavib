@@ -1,16 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #050508;
-  --color-surface: #0d0d14;
-  --color-surface-elevated: #14141f;
-  --color-border: #1f1f2e;
-  --color-muted: #8b8ba3;
-  --color-foreground: #f0f0f5;
-  --color-accent: #7c5cff;
-  --color-accent-cyan: #22d3ee;
-  --font-family-display: "Syne", system-ui, sans-serif;
-  --font-family-body: "DM Sans", system-ui, sans-serif;
+  --radius: 1rem;
+  --font-family-display: "Poppins", system-ui, sans-serif;
+  --font-family-body: "Poppins", system-ui, sans-serif;
+  --font-family-serif: "Source Serif 4", Georgia, serif;
 }
 
 @layer base {
@@ -20,54 +14,117 @@
     box-sizing: border-box;
   }
 
-  html {
-    scroll-behavior: auto;
-  }
-
-  html.lenis,
-  html.lenis body {
-    height: auto;
-  }
-
-  .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
-  }
-
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-
-  .lenis.lenis-stopped {
-    overflow: hidden;
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
   }
 
   body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--color-bg);
-    color: var(--color-foreground);
     font-family: var(--font-family-body);
+    font-weight: 400;
+    color: hsl(0 0% 100%);
+    background: hsl(0 0% 0%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  ::selection {
-    background-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
-    color: var(--color-foreground);
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-family-display);
+    font-weight: 500;
+  }
+
+  h1 em,
+  h1 i,
+  h1 .italic,
+  h2 em,
+  h2 i,
+  h2 .italic,
+  h3 em,
+  h3 i,
+  h3 .italic {
+    font-family: var(--font-family-serif);
+    font-style: italic;
   }
 }
 
-@layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-cyan) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+@layer components {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
   }
 
-  .glow-accent {
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.15) 80%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .liquid-glass-strong {
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border: none;
     box-shadow:
-      0 0 40px color-mix(in srgb, var(--color-accent) 25%, transparent),
-      0 0 80px color-mix(in srgb, var(--color-accent-cyan) 10%, transparent);
+      4px 4px 4px rgba(0, 0, 0, 0.05),
+      inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-glass-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.2) 20%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.2) 80%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
   }
 }
