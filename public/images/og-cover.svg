@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050508"/>
+      <stop offset="0.5" stop-color="#14141f"/>
+      <stop offset="1" stop-color="#050508"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(480 320) scale(500)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c5cff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(1440 760) scale(600)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22d3ee" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow1)"/>
+  <rect width="1920" height="1080" fill="url(#glow2)"/>
+  <circle cx="960" cy="540" r="180" stroke="#7c5cff" stroke-width="2" fill="none" opacity="0.5"/>
+  <circle cx="960" cy="540" r="120" stroke="#22d3ee" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <circle cx="960" cy="540" r="40" fill="#7c5cff" opacity="0.8"/>
+  <text x="960" y="820" text-anchor="middle" fill="#f0f0f5" font-family="system-ui,sans-serif" font-size="48" font-weight="700">Navavib</text>
+  <text x="960" y="880" text-anchor="middle" fill="#8b8ba3" font-family="system-ui,sans-serif" font-size="24">Diseño y desarrollo potenciados por IA</text>
+</svg>

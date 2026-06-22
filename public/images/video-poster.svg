@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d0d14"/>
+      <stop offset="1" stop-color="#050508"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(960 540) scale(700)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c5cff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <path d="M200 700 Q 480 400 960 500 T 1720 600" stroke="#22d3ee" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M200 800 Q 600 500 960 620 T 1720 720" stroke="#7c5cff" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <text x="960" y="960" text-anchor="middle" fill="#8b8ba3" font-family="system-ui,sans-serif" font-size="20" letter-spacing="8">SCROLL PARA EXPLORAR</text>
+</svg>
