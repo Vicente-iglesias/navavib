@@ -56,17 +56,18 @@ export function BloomLanding() {
 
   return (
     <div className="relative">
-      <video
-        className="fixed inset-0 z-0 h-full w-full object-cover [transform:translateZ(0)]"
-        src={VIDEO_SRC}
-        autoPlay
-        loop
-        muted
-        playsInline
-        aria-hidden
-      />
+      <div className="page-video-wrap" aria-hidden>
+        <video
+          className="page-video"
+          src={VIDEO_SRC}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
 
-      <div className="relative z-10">
+      <div className="relative z-[1]">
         {/* Hero */}
         <div className="flex min-h-screen flex-col lg:flex-row">
           <div className="relative flex min-h-screen w-full flex-col lg:w-[52%]">
