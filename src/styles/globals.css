@@ -79,13 +79,8 @@
     overflow: hidden;
     border: none;
     background: transparent;
-  }
-
-  .liquid-glass > *,
-  .liquid-glass-strong > *,
-  .liquid-glass-inner > * {
-    position: relative;
-    z-index: 2;
+    isolation: isolate;
+    z-index: 0;
   }
 
   .liquid-glass::after,
@@ -94,7 +89,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: -2;
     border-radius: inherit;
     pointer-events: none;
     -webkit-backdrop-filter: blur(16px) saturate(1.45);
@@ -148,7 +143,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    z-index: 1;
+    z-index: -1;
     border-radius: inherit;
     padding: 1.4px;
     pointer-events: none;
