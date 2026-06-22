@@ -18,18 +18,21 @@ export const services = [
     description:
       'Interfaces memorables con sistemas de diseño coherentes, prototipos interactivos y experiencias centradas en el usuario.',
     icon: '◈',
+    image: '/images/services/ui-ux.png',
   },
   {
     title: 'Desarrollo web & app',
     description:
       'Aplicaciones rápidas, accesibles y escalables con las tecnologías modernas que tu producto necesita.',
     icon: '⬡',
+    image: '/images/services/dev.png',
   },
   {
     title: 'Integración IA',
     description:
       'Copilots, automatizaciones y workflows inteligentes que amplifican tu equipo sin complicar tu stack.',
     icon: '◎',
+    image: '/images/services/ai.png',
   },
 ] as const
 

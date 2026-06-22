@@ -193,6 +193,39 @@
     );
   }
 
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    border-radius: inherit;
+    padding: 1.4px;
+    pointer-events: none;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.14) 20%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.14) 80%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+  }
+
   @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     .liquid-glass::after,
     .liquid-glass-strong::after,
